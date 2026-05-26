@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="/style.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+
+<header>
+    <h1>Doação de Gatos 🐱</h1>
+
+    <!-- Botão de login -->
+    <button class="open-modal" data-modal="modal-1">
+      Entre com seu E-mail.
+   </button>
+
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  
+  <button id="btnCadastrarGatinho">
+  CADASTRE UM GATINHO AQUI
+</button>
+
+  
+  <main>
+   <section id="formCadastroGato" style="display:none;">
+  <h2>Cadastrar gato</h2>
+
+  <form id="gatoForm">
+
+    <input
+      type="text"
+      id="nomeGato"
+      placeholder="Nome do gato"
+      required
+    />
+
+    <input
+      type="text"
+      id="corGato"
+      placeholder="Cor"
+      required
+    />
+
+    <select id="generoGato">
+      <option value="">Gênero</option>
+      <option value="macho">Macho</option>
+      <option value="femea">Fêmea</option>
+    </select>
+
+    <input
+      type="text"
+      id="cidadeGato"
+      placeholder="Cidade"
+      required
+    />
+
+    <textarea
+      id="descricaoGato"
+      placeholder="Descrição curta"
+    ></textarea>
+
+    <input
+      type="file"
+      id="fotoGato"
+      accept="image/*"
+    />
+
+    <button type="submit">
+      Cadastrar
+    </button>
+
+    <button type="button" id="ClosebtnCadastrarGatinho"> Fechar</button>
+  </form>
+
+</section>
+
+    <section id="listaGatos">
+      <h2>Gatos</h2>
+
+      <!-- Card de gato (exemplo) -->
+      <div class="gato">
+        <img src="gato-exemplo.jpg" alt="Foto do gato">
+
+         <p>
+          Filhote dócil, acostumado com crianças.
+        </p>
+
+        <!-- Comentários -->
+        <div class="comentarios">
+          <!-- comentários entram aqui via JS -->
+        </div>
+
+        <!-- Ação protegida -->
+        <button class="btnComentar">
+          Comentar
+        </button>
+      </div>
+
+    </section>
+
+
+
+
+
+
+<div class="modal" id="modal-1">
+     <div class="modal-content">
+        <h3>Verifique o seu e-mail</h3>
+
+        <input id="emailInput" placeholder="Seu E-mail"/>
+        <button onclick="sendCode()">Enviar código!</button>
+
+        <input id="CodeInput"placeholder="Código Enviado"/>
+        <button onclick="validateCode()">Validar código!</button>
+
+        <button class="close-modal" data-modal="modal-1">X</button>
+
+
+
+
+
+
+     </div>
+</div>
+
+    
+  <script src="auth.js"></script>
+  <script src="modal.js"></script>
+  <script src="cat.js"></script>
+  <script src="comments.js"></script>
+</body>
+</html>

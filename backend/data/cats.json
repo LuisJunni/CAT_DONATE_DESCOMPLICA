@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1773431992010,
+    "nome": "PersistTeste-1773431992005",
+    "cor": "Rajado",
+    "genero": "macho",
+    "cidade": "Recife",
+    "descricao": "Teste persistencia",
+    "createdAt": 1773431992010,
+    "expiresAt": 1774036792010,
+    "comments": [],
+    "foto": null,
+    "ownerEmail": null
+  },
+  {
+    "id": 1773432679196,
+    "nome": "FotoTeste-1773432679193",
+    "cor": "Laranja",
+    "genero": "femea",
+    "cidade": "Fortaleza",
+    "descricao": "Teste com foto",
+    "foto": "data:image/png;base64,AAAA",
+    "createdAt": 1773432679196,
+    "expiresAt": 1774037479196,
+    "comments": [
+      {
+        "id": 1773432683902,
+        "text": "Comentário de teste",
+        "createdAt": 1773432683902,
+        "authorEmail": null
+      }
+    ],
+    "ownerEmail": null
+  },
+  {
+    "id": 1773433045823,
+    "nome": "PersistFinal-1773433045821",
+    "cor": "Cinza",
+    "genero": "macho",
+    "cidade": "Goiania",
+    "descricao": "Persistencia final",
+    "foto": null,
+    "createdAt": 1773433045823,
+    "expiresAt": 1774037845823,
+    "comments": [],
+    "ownerEmail": null
+  }
+]

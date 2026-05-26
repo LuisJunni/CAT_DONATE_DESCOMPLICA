@@ -1,0 +1,226 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Corpo */
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #fff;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* quebra em telas menores */
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+/* Botão login */
+.open-modal {
+  padding: 10px 16px;
+  border: none;
+  background-color: #ff8c42;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.open-modal:hover {
+  background-color: #e6772e;
+}
+
+/* Conteúdo principal */
+main {
+  padding: 20px;
+}
+
+/* Botão cadastrar gatinho */
+#btnCadastrarGatinho {
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 16px;
+  margin: 20px 0;
+  width: 100%;
+}
+
+/* Modal */
+.modal {
+  display: none; /* JS troca para flex */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.65);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 24px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content input,
+.modal-content button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.modal-content button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.close-modal {
+  background: transparent;
+  color: #666;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Lista de gatos em coluna */
+#listaGatos {
+  display: flex;
+  flex-direction: column; /* força os cards a ficarem um abaixo do outro */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card do gato */
+.gato {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gato img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.gato p {
+  margin-bottom: 10px;
+}
+
+.comentarios {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.comment-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.comment-item:last-child {
+  border-bottom: none;
+}
+
+.actions-row {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.actions-row .btnComentar {
+  margin-top: 0;
+}
+
+.cat-actions {
+  margin-top: 12px;
+}
+
+.comment-form {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.comment-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Botão comentar */
+.btnComentar {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.btnComentar:hover {
+  background-color: #3e8e41;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .gato {
+    padding: 12px;
+  }
+
+  .btnComentar,
+  #btnCadastrarGatinho {
+    width: 100%;
+  }
+}
